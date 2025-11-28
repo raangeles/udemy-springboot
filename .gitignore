@@ -1,0 +1,45 @@
+### JAVA ###
+**/target/        # Maven build directory
+**/build/         # Gradle/general build directory
+**/out/           # IntelliJ/general output directory
+**/classes/       # Compiled classes directory
+**/dist/          # Distribution directory
+**/bin/           # Common binary/output directory
+
+### INTELLIJ ###
+
+Configuration folders (often at the root, but better to be safe)
+
+.idea/         # IntelliJ project configuration folder
+.gradle/       # Gradle wrapper files
+
+IntelliJ files (Globally ignored)
+
+*.iml
+*.ipr
+*.iws
+
+### LOGS BACKUPS AND TEMP FILES ###
+
+Logs and temporary files (Globally ignored)
+
+*.log
+*.bak
+temp/
+tmp/
+
+### OS and other stuff ###
+
+Node/npm
+
+/node_modules
+
+macOS
+
+.DS_Store
+
+Windows
+
+Thumbs.db
+*.exe
+*.dll
