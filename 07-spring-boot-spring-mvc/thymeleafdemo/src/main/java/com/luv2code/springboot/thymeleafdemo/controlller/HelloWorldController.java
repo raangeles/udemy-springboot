@@ -3,6 +3,8 @@ package com.luv2code.springboot.thymeleafdemo.controlller;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -26,6 +28,7 @@ public class HelloWorldController {
     public String letsShoutDude(HttpServletRequest request, Model model) {
 
         // read the request parameter from the HTML form
+
         String theName = request.getParameter("studentName");
 
         // convert the data to UPPERCASE
@@ -40,14 +43,14 @@ public class HelloWorldController {
         return "helloworld";
     }
 
-    @RequestMapping("/processFormVersionThree")
+    @GetMapping("/processFormVersionThree")
     public String processFormVersionThree(@RequestParam("studentName") String theName, Model model) {
 
         // convert the data to UPPERCASE
         theName = theName.toUpperCase();
 
         // create the message
-        String result = "Hey my friend! " + theName;
+        String result = "Hey my friend from V3!" + theName;
 
         // add message to the model
         model.addAttribute("message", result);
